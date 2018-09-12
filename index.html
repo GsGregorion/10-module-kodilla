@@ -6,12 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>10.1 - plugin</title>
     <link rel="stylesheet" href="vendor/normalize.css">
-    <link rel="stylesheet" href="vendor/flickity.min.css">
+    <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="main-carousel">
+        <div class="carousel-cell" id="carousel-cell-1" style="background-image: url('https://images.pexels.com/photos/1034887/pexels-photo-1034887.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell-2" style="background-image: url('https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell-3" style="background-image: url('https://images.pexels.com/photos/970519/pexels-photo-970519.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell-4" style="background-image: url('https://images.pexels.com/photos/547119/pexels-photo-547119.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell carousel-cell-medium-size" id="carousel-cell-5" style="background-image: url('https://images.pexels.com/photos/58737/pexels-photo-58737.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell-6" style="background-image: url('https://images.pexels.com/photos/943507/pexels-photo-943507.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell-7" style="background-image: url('https://images.pexels.com/photos/52062/pexels-photo-52062.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell-8" style="background-image: url('https://images.pexels.com/photos/132088/pexels-photo-132088.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell carousel-cell-big-size" id="carousel-cell-9" style="background-image: url('https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell-10" style="background-image: url('https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&h=350')">
+            <div class="container">
+                <p>Example tekst</p>
+            </div>
+        </div>
+  </div>
 
-    <script  src="vendor/flickity.pkgd.js"></script>
+  <div class="links">
+    <a href="#carousel-cell-1">slide 1</a>
+    <a href="#carousel-cell-2">slide 2</a>
+    <a href="#carousel-cell-3">slide 3</a>
+    <a href="#carousel-cell-4">slide 4</a>
+    <a href="#carousel-cell-5">slide 5</a>
+    <a href="#carousel-cell-6">slide 6</a>
+    <a href="#carousel-cell-7">slide 7</a>
+    <a href="#carousel-cell-8">slide 8</a>
+    <a href="#carousel-cell-9">slide 9</a>
+    <a href="#carousel-cell-10">slide 10</a>
+  </div>
+
+  <div class="progress-bar"></div>
+
+  <button id="goBack" title="Go to top">Start again!</button>
+
+    <script  src="vendor/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
     <script  src="js/index.js"></script>
 </body>
 </html>
