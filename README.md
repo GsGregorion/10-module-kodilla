@@ -1,5 +1,5 @@
-# 10.1-plugin
+# Task 10
 
-https://gsgregorion.github.io/10.1-plugin/
+https://gsgregorion.github.io/Task-10/
 
-https://codepen.io/gregorion/pen/xarBLa
+https://codepen.io/gregorion/pen/YOvMQZ
