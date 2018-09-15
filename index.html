@@ -4,89 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>10.1 - plugin</title>
+    <title>10.2 - mustache</title>
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="main-carousel">
-        <div class="carousel-cell" id="carousel-cell-1" style="background-image: url('https://images.pexels.com/photos/1034887/pexels-photo-1034887.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell-2" style="background-image: url('https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell-3" style="background-image: url('https://images.pexels.com/photos/970519/pexels-photo-970519.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst Example text long text</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell-4" style="background-image: url('https://images.pexels.com/photos/547119/pexels-photo-547119.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell carousel-cell-medium-size" id="carousel-cell-5" style="background-image: url('https://images.pexels.com/photos/58737/pexels-photo-58737.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell-6" style="background-image: url('https://images.pexels.com/photos/943507/pexels-photo-943507.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell-7" style="background-image: url('https://images.pexels.com/photos/52062/pexels-photo-52062.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell-8" style="background-image: url('https://images.pexels.com/photos/132088/pexels-photo-132088.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell carousel-cell-big-size" id="carousel-cell-9" style="background-image: url('https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell-10" style="background-image: url('https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&h=350')">
-            <div class="container">
-                <p>Example tekst</p>
-            </div>
-        </div>
+    <div class="container">
+        <h1>Here You can see my slides:</h1>
     </div>
 
-    <div class="links">
-        <a href="#carousel-cell-1">slide 1</a>
-        <a href="#carousel-cell-2">slide 2</a>
-        <a href="#carousel-cell-3">slide 3</a>
-        <a href="#carousel-cell-4">slide 4</a>
-        <a href="#carousel-cell-5">slide 5</a>
-        <a href="#carousel-cell-6">slide 6</a>
-        <a href="#carousel-cell-7">slide 7</a>
-        <a href="#carousel-cell-8">slide 8</a>
-        <a href="#carousel-cell-9">slide 9</a>
-        <a href="#carousel-cell-10">slide 10</a>
-    </div>
-  
+    <div class="main-carousel" id="generatedMySlides"></div>
+    
+    <div class="links" id="generatedMyLinks"></div>
+    
     <div class="progress-bar"></div>
-  
+    
     <div class="btn-wrapper">
-        <button class="my-buttons" id="prevBtn" title="Go back">Previous!</button>
-        <button class="my-buttons" id="goBack" title="Go to top">Start again!</button>
-        <button class="my-buttons" id="nextBtn" title="Go forward">Next!</button>
+      <button class="my-buttons" id="prevBtn" title="Go back">Previous!</button>
+      <button class="my-buttons" id="goBack" title="Go to top">Start again!</button>
+      <button class="my-buttons" id="nextBtn" title="Go forward">Next!</button>
     </div>
     
+    <script id="template-slide-mustache" type="x-tmpl-mustache">
+      <div class="carousel-cell" id="{{cell}}" style="background-image: url('{{image}}')">
+        <div class="container">
+          <h2>{{title}}</h2>
+        </div>
+      </div>
+    </script>
+    
+    <script id="template-my-links" type="x-tmpl-mustache">
+        <a href="#{{cell}}">{{slide}}</a>
+    </script>
+    
+    <script>
+        var slidesInnerData = [
+            {
+                image: 'https://images.pexels.com/photos/1034887/pexels-photo-1034887.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-1',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'Unknown localization',
+                slide: 'slide 1'
+            },
+            {
+                image: 'https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-2',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'Italia',
+                slide: 'slide 2'
+            },
+            {
+                image: 'https://images.pexels.com/photos/970519/pexels-photo-970519.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-3',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'Italia',
+                slide: 'slide 3'
+            },
+            {
+                image: 'https://images.pexels.com/photos/547119/pexels-photo-547119.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-4',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'Italia',
+                slide: 'slide 4'
+            },
+            {
+                image: 'https://images.pexels.com/photos/58737/pexels-photo-58737.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-5',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'España',
+                slide: 'slide 5'
+            },
+            {
+                image: 'https://images.pexels.com/photos/943507/pexels-photo-943507.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-6',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'España',
+                slide: 'slide 6'
+            },
+            {
+                image: 'https://images.pexels.com/photos/52062/pexels-photo-52062.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-7',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'España',
+                slide: 'slide 7'
+            },
+            {
+                image: 'https://images.pexels.com/photos/132088/pexels-photo-132088.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-8',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'España',
+                slide: 'slide 8'
+            },
+            {
+                image: 'https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-9',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'Nippon-koku',
+                slide: 'slide 9'
+            },
+            {
+                image: 'https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&h=350',
+                cell: 'carousel-cell-10',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'Nippon-koku',
+                slide: 'slide 10'
+            },
+            {
+                image: '',
+                cell: 'carousel-cell-11',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: '??',
+                slide: 'slide 11'
+            }
+        ];    
+      </script>
+
 
     <script  src="vendor/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
     <script  src="js/index.js"></script>
+
 </body>
 </html>

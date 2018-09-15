@@ -8,6 +8,9 @@ body {
   font-family: sans-serif; 
 }
 
+h1 {
+  margin: 5px 14px;
+}
 .main-carousel {
   background: #EEE;
   min-height: 250px;
@@ -36,7 +39,7 @@ body {
     font-size: 25px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    p {
+    h2 {
       margin: 2.5px;
     }
   }
@@ -83,7 +86,7 @@ body {
 .links {
   display: flex;
   justify-content: center;
-  margin: 25px;
+  margin: 25px autos;
   a {
     margin: 15px 20px;
     text-decoration: none;

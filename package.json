@@ -38,6 +38,7 @@
     "flickity": "^2.1.2",
     "globstar": "^1.0.0",
     "mkdirp": "^0.5.1",
+    "mustache": "^2.3.2",
     "node-sass": "^4.9.3",
     "normalize.css": "^8.0.0",
     "npm-run-all": "^4.1.3",
