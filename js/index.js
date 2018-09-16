@@ -1,13 +1,4 @@
 'use strict'
-<<<<<<< HEAD
-var templateSlide = document.getElementById('template-slide-mustache').innerHTML,
-    templateLinks = document.getElementById('template-my-links').innerHTML,
-    slideItems = '',
-    slideLinks = '';
-
-Mustache.parse(templateSlide);
-Mustache.parse(templateLinks);	
-=======
 window.initMap = function initMap() {
   var yellowstone = {lat: 44.405268, lng: -110.016558};
   var map = new google.maps.Map (
@@ -26,28 +17,16 @@ var templateSlide = document.getElementById('template-slide-mustache').innerHTML
     templateLinks = document.getElementById('template-my-links').innerHTML,
     slideItems = '',
     slideLinks = '';
->>>>>>> task-10.3
 
 Mustache.parse(templateSlide);
 Mustache.parse(templateLinks);	
-		
+        
 for ( var i = 0; i < slidesInnerData.length; i++) {
-<<<<<<< HEAD
-    console.log(slidesInnerData);
-
-    slideItems += Mustache.render(templateSlide, slidesInnerData[i]);
-    slideLinks += Mustache.render(templateLinks, slidesInnerData[i]);
-}
-	
-generatedMySlides.insertAdjacentHTML('beforeend', slideItems);
-generatedMyLinks.insertAdjacentHTML('beforeend', slideLinks);
-=======
   console.log(slidesInnerData);
   slideItems += Mustache.render(templateSlide, slidesInnerData[i]);
   slideLinks += Mustache.render(templateLinks, slidesInnerData[i]);
 }
->>>>>>> task-10.3
-  
+      
 generatedMySlides.insertAdjacentHTML('beforeend', slideItems);
 generatedMyLinks.insertAdjacentHTML('beforeend', slideLinks);  
 
