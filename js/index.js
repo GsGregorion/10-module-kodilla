@@ -10,8 +10,7 @@ var templateSlide = document.getElementById('template-slide-mustache').innerHTML
 		
 for ( var i = 0; i < slidesInnerData.length; i++) {
     console.log(slidesInnerData);
-    
-		slideItems += Mustache.render(templateSlide, slidesInnerData[i]);
+    slideItems += Mustache.render(templateSlide, slidesInnerData[i]);
     slideLinks += Mustache.render(templateLinks, slidesInnerData[i]);
 }
 	
@@ -21,13 +20,13 @@ for ( var i = 0; i < slidesInnerData.length; i++) {
 
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
-  // options
-  pageDots: false,
-  hash: true,
-  setGallerySize: false,
-  wrapAround: true,
-  cellAlign: 'center',
-  contain: true
+    // options
+    pageDots: false,
+    hash: true,
+    setGallerySize: false,
+    wrapAround: true,
+    cellAlign: 'center',
+    contain: true
 });
 
 var progressBar = document.querySelector('.progress-bar')
@@ -65,5 +64,4 @@ function initMap() {
     document.getElementById('map'), {zoom: 4, center: uluru});
   
   var marker = new google.maps.Marker({position: uluru, map: map})
-  
 }
