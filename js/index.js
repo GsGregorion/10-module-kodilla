@@ -1,11 +1,11 @@
 'use strict'
 var templateSlide = document.getElementById('template-slide-mustache').innerHTML,
-  templateLinks = document.getElementById('template-my-links').innerHTML,
-  slideItems = '',
-  slideLinks = '';
+    templateLinks = document.getElementById('template-my-links').innerHTML,
+    slideItems = '',
+    slideLinks = '';
 
-	Mustache.parse(templateSlide);
-  Mustache.parse(templateLinks);	
+Mustache.parse(templateSlide);
+Mustache.parse(templateLinks);	
 
 		
 for ( var i = 0; i < slidesInnerData.length; i++) {
@@ -15,8 +15,8 @@ for ( var i = 0; i < slidesInnerData.length; i++) {
     slideLinks += Mustache.render(templateLinks, slidesInnerData[i]);
 }
 	
-  generatedMySlides.insertAdjacentHTML('beforeend', slideItems);
-  generatedMyLinks.insertAdjacentHTML('beforeend', slideLinks);
+generatedMySlides.insertAdjacentHTML('beforeend', slideItems);
+generatedMyLinks.insertAdjacentHTML('beforeend', slideLinks);
   
 
 var elem = document.querySelector('.main-carousel');
