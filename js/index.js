@@ -1,22 +1,34 @@
 'use strict'
+window.initMap = function initMap() {
+  var yellowstone = {lat: 44.405268, lng: -110.016558};
+  var map = new google.maps.Map (
+      document.getElementById('map'),
+      {zoom: 4, center: yellowstone});
+
+  var marker = new google.maps.Marker({position: yellowstone, map: map});
+  
+  for ( var i = 0; i < slidesInnerData.length; i++) {
+    console.log(slidesInnerData);
+    marker = new google.maps.Marker({position: slidesInnerData[i].coords, map: map});
+  }
+}
+
 var templateSlide = document.getElementById('template-slide-mustache').innerHTML,
-  templateLinks = document.getElementById('template-my-links').innerHTML,
-  slideItems = '',
-  slideLinks = '';
+    templateLinks = document.getElementById('template-my-links').innerHTML,
+    slideItems = '',
+    slideLinks = '';
 
-	Mustache.parse(templateSlide);
-  Mustache.parse(templateLinks);	
-
+Mustache.parse(templateSlide);
+Mustache.parse(templateLinks);	
 		
 for ( var i = 0; i < slidesInnerData.length; i++) {
-    console.log(slidesInnerData);
-    slideItems += Mustache.render(templateSlide, slidesInnerData[i]);
-    slideLinks += Mustache.render(templateLinks, slidesInnerData[i]);
+  console.log(slidesInnerData);
+  slideItems += Mustache.render(templateSlide, slidesInnerData[i]);
+  slideLinks += Mustache.render(templateLinks, slidesInnerData[i]);
 }
-	
-  generatedMySlides.insertAdjacentHTML('beforeend', slideItems);
-  generatedMyLinks.insertAdjacentHTML('beforeend', slideLinks);
   
+generatedMySlides.insertAdjacentHTML('beforeend', slideItems);
+generatedMyLinks.insertAdjacentHTML('beforeend', slideLinks);  
 
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
@@ -36,11 +48,12 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
+//get buttons from the page
 var reStartButton = document.getElementById('goBack');
 var goBackButton = document.getElementById('prevBtn');
 var goForwardButton = document.getElementById('nextBtn');
 
-
+//flickity code for buttons next prev and re-start
 reStartButton.addEventListener( 'click', function( event ) {
   // filter for button clicks
   flkty.select( 0 );
@@ -55,13 +68,3 @@ goForwardButton.addEventListener( 'click', function( event ) {
   // filter for button clicks
   flkty.next(  );
 });
-
-
-function initMap() {
-  var uluru = {lat: -25.344, lng: 131.036};
-  
-  var map = new google.maps.Map(
-    document.getElementById('map'), {zoom: 4, center: uluru});
-  
-  var marker = new google.maps.Marker({position: uluru, map: map})
-}

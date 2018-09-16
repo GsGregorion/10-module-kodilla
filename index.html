@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>10.2 - mustache</title>
+    <title>10.3 - google maps</title>
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
     <link rel="stylesheet" href="css/style.css">
@@ -15,14 +15,13 @@
     </div>
 
     <div class="main-carousel" id="generatedMySlides"></div>
+
+    <div class="my-google-map">
+        <div id="map">
+        </div>
+    </div>
     
     <div class="links" id="generatedMyLinks"></div>
-    
-    <div class="my-google-map">
-      <div id="map">
-      </div>
-    </div>
-  
     
     <div class="progress-bar"></div>
     
@@ -51,77 +50,88 @@
                 cell: 'carousel-cell-1',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'Unknown localization',
-                slide: 'slide 1'
+                slide: 'slide 1',
+                coords: {lat: 44.405268, lng: -110.016558}
             },
             {
                 image: 'https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-2',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'Italia',
-                slide: 'slide 2'
+                slide: 'slide 2',
+                coords: {lat: 41.902250, lng: 12.457253}
             },
             {
                 image: 'https://images.pexels.com/photos/970519/pexels-photo-970519.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-3',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'Italia',
-                slide: 'slide 3'
+                slide: 'slide 3',
+                coords: {lat: 45.437487, lng: 12.329304}
             },
             {
                 image: 'https://images.pexels.com/photos/547119/pexels-photo-547119.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-4',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'Italia',
-                slide: 'slide 4'
+                slide: 'slide 4',
+                coords: {lat: 45.972726, lng: 8.654156}
             },
             {
                 image: 'https://images.pexels.com/photos/58737/pexels-photo-58737.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-5',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'España',
-                slide: 'slide 5'
+                slide: 'slide 5',
+                coords: {lat: 49.840166, lng: 24.038737}
             },
             {
                 image: 'https://images.pexels.com/photos/943507/pexels-photo-943507.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-6',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'España',
-                slide: 'slide 6'
+                slide: 'slide 6',
+                coords: {lat: 41.416122, lng: 2.153599}
             },
             {
                 image: 'https://images.pexels.com/photos/52062/pexels-photo-52062.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-7',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'España',
-                slide: 'slide 7'
+                slide: 'slide 7',
+                coords: {lat: 40.413798, lng: -3.692095}
             },
             {
                 image: 'https://images.pexels.com/photos/132088/pexels-photo-132088.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-8',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'España',
-                slide: 'slide 8'
+                slide: 'slide 8',
+                coords: {lat: 35.684082, lng: 139.751429}
             },
             {
                 image: 'https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-9',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'Nippon-koku',
-                slide: 'slide 9'
+                slide: 'slide 9',
+                coords: {lat: 35.023150, lng: 135.763843}
             },
             {
                 image: 'https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-10',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: 'Nippon-koku',
-                slide: 'slide 10'
+                slide: 'slide 10',
+                coords: {lat: 36.238094, lng: 137.970084}
             },
             {
                 image: '',
                 cell: 'carousel-cell-11',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
                 title: '??',
-                slide: 'slide 11'
+                slide: 'slide 11',
+                coords: '{lat: ??, lng: ??}'
             }
         ];    
     </script>
@@ -131,7 +141,7 @@
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
     <script  src="js/index.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVCB2cOBBN08QAeh0PmliRRJ6VHwnqsM8&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
 
 </body>
 </html>
