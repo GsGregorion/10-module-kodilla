@@ -10,8 +10,8 @@ Mustache.parse(templateLinks);
 		
 for ( var i = 0; i < slidesInnerData.length; i++) {
     console.log(slidesInnerData);
-    
-		slideItems += Mustache.render(templateSlide, slidesInnerData[i]);
+
+    slideItems += Mustache.render(templateSlide, slidesInnerData[i]);
     slideLinks += Mustache.render(templateLinks, slidesInnerData[i]);
 }
 	
