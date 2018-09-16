@@ -100,6 +100,14 @@ h1 {
   }
 }
 
+#map {
+  width: 95%;
+  min-height: 250px;
+  height: 50vh;
+  background-color: grey;
+  margin: 15px auto;
+}
+
 .progress-bar {
   height: 20px;
   width: 0;
