@@ -37,9 +37,9 @@ h1 { margin: 5px 14px; }
   background: white;
 }
 */
-.links { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; margin: 25px autos; }
+.links { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; margin: 25px 5px; width: auto; }
 
-.links a { margin: 15px 20px; text-decoration: none; font-size: 15px; color: #fff; background-color: #93C0C3; padding: 4px 8px; font-weight: bold; text-transform: uppercase; border-radius: 14px; }
+.links a { padding: 5px auto; text-decoration: none; font-size: 15px; color: #fff; background-color: #93C0C3; padding: 4px 8px; font-weight: bold; text-transform: uppercase; border-radius: 14px; }
 
 #map { width: 95%; min-height: 250px; height: 50vh; background-color: grey; margin: 15px auto; }
 
