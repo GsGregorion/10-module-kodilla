@@ -13,7 +13,9 @@
     <div class="container">
         <h1>Here You can see my slides:</h1>
     </div>
-
+    <div id="infos">
+        
+    </div>
     <div class="main-carousel" id="generatedMySlides"></div>
 
     <div class="my-google-map">
@@ -46,95 +48,117 @@
     <script>
         var slidesInnerData = [
             {
-                image: 'https://images.pexels.com/photos/1034887/pexels-photo-1034887.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '1',
+                image: 'https://images.pexels.com/photos/533858/pexels-photo-533858.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-1',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'Unknown localization',
+                title: 'Yellowstone',
                 slide: 'slide 1',
                 coords: {lat: 44.405268, lng: -110.016558}
             },
             {
+                no: '2',
                 image: 'https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-2',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'Italia',
+                title: 'Roma',
                 slide: 'slide 2',
                 coords: {lat: 41.902250, lng: 12.457253}
             },
             {
-                image: 'https://images.pexels.com/photos/970519/pexels-photo-970519.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '3',
+                image: 'https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-3',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'Italia',
+                title: 'Himeji Castle',
                 slide: 'slide 3',
-                coords: {lat: 45.437487, lng: 12.329304}
+                coords: {lat: 34.839414, lng: 134.693862}
             },
             {
-                image: 'https://images.pexels.com/photos/547119/pexels-photo-547119.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '4',
+                image: 'https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
                 cell: 'carousel-cell-4',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'Italia',
+                title: 'Kastelruth',
                 slide: 'slide 4',
-                coords: {lat: 45.972726, lng: 8.654156}
+                coords: {lat: 46.566735, lng: 11.559801}
             },
             {
-                image: 'https://images.pexels.com/photos/58737/pexels-photo-58737.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '5',
+                image: 'https://cdn.pixabay.com/photo/2015/12/11/16/38/sankeien-gardens-1088419__340.jpg',
                 cell: 'carousel-cell-5',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'España',
+                title: 'Sankeien Garder',
                 slide: 'slide 5',
-                coords: {lat: 49.840166, lng: 24.038737}
+                coords: {lat: 35.418066, lng: 139.661224}
             },
             {
-                image: 'https://images.pexels.com/photos/943507/pexels-photo-943507.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '6',
+                image: 'https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-6',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'España',
+                title: 'Barcelona',
                 slide: 'slide 6',
-                coords: {lat: 41.416122, lng: 2.153599}
+                coords: {lat: 41.414342, lng: 2.152662}
             },
             {
-                image: 'https://images.pexels.com/photos/52062/pexels-photo-52062.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '7',
+                image: 'https://images.pexels.com/photos/161150/kiyomizu-dera-temple-kyoto-japan-161150.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-7',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'España',
+                title: 'Kioto',
                 slide: 'slide 7',
-                coords: {lat: 40.413798, lng: -3.692095}
+                coords: {lat: 34.995293, lng: 135.779273}
             },
             {
-                image: 'https://images.pexels.com/photos/132088/pexels-photo-132088.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '8',
+                image: 'https://images.pexels.com/photos/17658/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-8',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'España',
+                title: 'Madrid',
                 slide: 'slide 8',
-                coords: {lat: 35.684082, lng: 139.751429}
+                coords: {lat: 40.413765, lng: -3.692106}
             },
             {
-                image: 'https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '9',
+                image: 'https://images.pexels.com/photos/96422/pexels-photo-96422.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-9',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'Nippon-koku',
+                title: 'Tokio',
                 slide: 'slide 9',
-                coords: {lat: 35.023150, lng: 135.763843}
+                coords: {lat: 35.713312, lng: 139.737947}
             },
             {
-                image: 'https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&h=350',
+                no: '10',
+                image: 'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-10',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: 'Nippon-koku',
+                title: 'Paris',
                 slide: 'slide 10',
-                coords: {lat: 36.238094, lng: 137.970084}
+                coords: {lat: 48.854878, lng: 2.347463}
             },
             {
-                image: '',
+                no: '11',
+                image: 'https://images.pexels.com/photos/1386110/pexels-photo-1386110.jpeg?auto=compress&cs=tinysrgb&h=350',
                 cell: 'carousel-cell-11',
                 description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-                title: '??',
+                title: 'Lwów',
                 slide: 'slide 11',
-                coords: '{lat: ??, lng: ??}'
+                coords: {lat: 49.839143, lng: 24.028742}
+            },
+            {
+                no: '12',
+                image: 'https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                cell: 'carousel-cell-12',
+                description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+                title: 'New York',
+                slide: 'slide 12',
+                coords: {lat: 40.674596, lng: -73.936994}
             }
         ];    
     </script>
+
+
 
 
     <script  src="vendor/flickity.pkgd.min.js"></script>

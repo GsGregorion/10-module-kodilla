@@ -1,16 +1,20 @@
 'use strict'
 window.initMap = function initMap() {
-  var yellowstone = {lat: 44.405268, lng: -110.016558};
+  var europe = {lat: 49.839143, lng: 24.028742};
   var map = new google.maps.Map (
-      document.getElementById('map'),
-      {zoom: 4, center: yellowstone});
-
-  var marker = new google.maps.Marker({position: yellowstone, map: map});
+    document.getElementById('map'),
+    {zoom: 5, center: europe});
   
-  for ( var i = 0; i < slidesInnerData.length; i++) {
-    console.log(slidesInnerData);
-    marker = new google.maps.Marker({position: slidesInnerData[i].coords, map: map});
-  }
+  var markers = [];
+  var position = [];
+    for ( var i = 0; i < slidesInnerData.length; i++) {
+      position[i] = slidesInnerData[i].coords;
+      markers[i] = new google.maps.Marker({position: position[i], map: map});
+      markers[i].index = i;
+      markers[i].addListener( 'click', function() {
+        flkty.select( this.index )
+    })
+  };
 }
 
 var templateSlide = document.getElementById('template-slide-mustache').innerHTML,
@@ -41,11 +45,30 @@ var flkty = new Flickity( elem, {
     contain: true
 });
 
-var progressBar = document.querySelector('.progress-bar')
+var progressBar = document.querySelector('.progress-bar');
 
 flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
+});
+
+flkty.on( 'change', function( index ) {
+  var position = [];
+    position[index] = slidesInnerData[index].coords;
+  var markers = [];
+  var map = new google.maps.Map (
+    document.getElementById('map'),
+    {zoom: 8, center: position[index]}
+  );
+  
+  for ( var i = 0; i < slidesInnerData.length; i++) {
+    position[i] = slidesInnerData[i].coords;
+    markers[i] = new google.maps.Marker({position: position[i], map: map});
+    markers[i].index = i;
+    markers[i].addListener( 'click', function() {
+      flkty.select( this.index )
+    })
+  };
 });
 
 //get buttons from the page
