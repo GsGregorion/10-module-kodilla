@@ -7,7 +7,7 @@ h1 { margin: 5px 14px; }
 
 .main-carousel { background: #EEE; min-height: 250px; height: 50vh; }
 
-.carousel-cell { display: -ms-flexbox; display: flex; -ms-flex-align: end; align-items: flex-end; -ms-flex-pack: center; justify-content: center; width: 32%; height: 100%; margin-right: 10px; background: #8C8; background-repeat: space; background-size: cover; border-radius: 5px; counter-increment: carousel-cell; -o-object-fit: cover; object-fit: cover; }
+.carousel-cell { display: flex; align-items: flex-end; justify-content: center; width: 32%; height: 100%; margin-right: 10px; background: #8C8; background-repeat: space; background-size: cover; border-radius: 5px; counter-increment: carousel-cell; object-fit: cover; }
 
 .carousel-cell .container { max-width: 1200px; margin: 15px auto; text-align: center; font-weight: bold; font-size: 25px; background-color: rgba(0, 0, 0, 0.5); color: #fff; }
 
@@ -37,15 +37,15 @@ h1 { margin: 5px 14px; }
   background: white;
 }
 */
-.links { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; margin: 25px 5px; width: auto; }
+.links { display: flex; justify-content: center; margin: 25px 5px; }
 
-.links a { padding: 5px auto; text-decoration: none; font-size: 15px; color: #fff; background-color: #93C0C3; padding: 4px 8px; font-weight: bold; text-transform: uppercase; border-radius: 14px; }
+.links a { margin: 25px 5px; padding: 5px auto; text-decoration: none; font-size: 15px; color: #fff; background-color: #93C0C3; padding: 4px 8px; font-weight: bold; text-transform: uppercase; border-radius: 14px; }
 
 #map { width: 95%; min-height: 250px; height: 50vh; background-color: grey; margin: 15px auto; }
 
 .progress-bar { height: 20px; width: 0; background: #333; }
 
-.btn-wrapper { display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; }
+.btn-wrapper { display: flex; justify-content: space-around; }
 
 .my-buttons { width: 300px; height: 75px; font-weight: bold; font-size: 35px; border-radius: 25px; background-color: #0490DD; color: #fff; text-align: center; margin-top: 5%; outline: none; }
 
